@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Morning Essentials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Order Your Morning Essentials</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="products.html" class="products">Our Products</a></li>
+                <li><a href="about.html" class="about">About Us</a></li>
+                <li><a href="contact.html" class="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h2>Select Your Items</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img id="flowers-img" src="Product Icons/handful flowers.jpeg" alt="Puja Flowers">
+                    <h3>Puja Flowers</h3>
+                    <select name="flowers" id="flowers" onchange="updateImage('flowers')">
+                        <option value="handful">Handful</option>
+                        <option value="small-bag">Small Bag</option>
+                        <option value="bag">Bag</option>
+                    </select>
+                    <button class="add-btn">Add</button>
+                </div>
+                <div class="product-card">
+                    <img id="milk-img" src="Product Icons/amul 0.5.jpeg" alt="Milk">
+                    <h3>Milk</h3>
+                    <select name="milk" id="milk" onchange="updateImage('milk')">
+                        <option value="None">None</option>
+                        <option value="amul-0.5lit">Amul 0.5 L</option>
+                        <option value="amul-1lit">Amul 1 L</option>
+                        <option value="gokul">Gokul</option>
+                    </select>
+                    <button class="add-btn">Add</button>
+                </div>
+                <div class="product-card">
+                    <img id="eggs-img" src="Product Icons/egg.jpg" alt="Eggs">
+                    <h3>Eggs</h3>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('eggs', -1)">-</button>
+                        <input type="number" id="eggs" name="eggs" value="0" min="0" onchange="updateImage('eggs')">
+                        <button class="quantity-btn" onclick="changeQuantity('eggs', 1)">+</button>
+                    </div>
+                    <button class="add-btn">Add</button>
+                </div>
+                <div class="product-card">
+                    <img id="bread-img" src="Product Icons/white bread.webp" alt="Bread">
+                    <h3>Bread</h3>
+                    <select name="bread" id="bread" onchange="updateImage('bread')">
+                        <option value="wheat">Wheat Bread</option>
+                        <option value="simple-small">Simple Bread Small</option>
+                        <option value="simple-large">Simple Bread Large</option>
+                    </select>
+                    <button class="add-btn">Add</button>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function changeQuantity(id, delta) {
+            const input = document.getElementById(id);
+            const currentValue = parseInt(input.value);
+            const newValue = currentValue + delta;
+            input.value = Math.max(newValue, 0);
+            updateImage(id);
+        }
+
+        function updateImage(product) {
+            const productImages = {
+                flowers: {
+                    handful: 'Product Icons/handful flowers.jpeg',
+                    'small-bag': 'Product Icons/small bag flowers.jpeg',
+                    bag: 'Product Icons/med bag of flower.jpeg'
+                },
+                milk: {
+                    'amul-0.5lit': 'Icons/amul 0.5.jpeg',
+                    'amul-1lit': 'Icons/amul 1lit.jpg',
+                    gokul: 'Icons/gokul.jpg'
+                },
+                eggs: {
+                    0: 'Icons/egg.jpg',
+                    1: 'Icons/one egg.jpg',
+                    2: 'Icons/two eggs.jpg',
+                    6: 'Icons/six eggs.jpg',
+                    12: 'Icons/twelve eggs.jpg'
+                },
+                bread: {
+                    wheat: 'Icons/wheat bread.jpg',
+                    'simple-small': 'Icons/simple bread small.jpg',
+                    'simple-large': 'Icons/simple bread large.jpg'
+                }
+            };
+
+            const img = document.getElementById(`${product}-img`);
+            let selectedOption;
+
+            if (product === 'eggs') {
+                selectedOption = document.getElementById(product).value;
+            } else {
+                const select = document.getElementById(product);
+                selectedOption = select.value;
+            }
+
+            img.src = productImages[product][selectedOption] || productImages[product][0];
+        }
+    </script>
+
+</body>
+
+</html>

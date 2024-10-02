@@ -1,0 +1,350 @@
+/* Style for the title */
+.title, h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 400px; /* Use max-width for responsiveness */
+    padding: 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the element horizontally */
+}
+
+.title-all {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center content horizontally */
+}
+
+.slogan {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1%;
+    color: aliceblue;
+    font-size: 28px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    /* Distribute items evenly */
+    list-style-type: none;
+    /* Remove default bullet points */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent background */
+    /* padding: 10px 0; */
+    /* Add vertical padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+/* Style for the menu items */
+.menu li {
+    flex: 1;
+    /* Allow items to grow and fill the container */
+    text-align: center;
+    /* Center text within each item */
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    /* Add padding to create space for the icon */
+    text-decoration: none;
+    /* Remove default underline */
+    color: #000;
+    /* Default text color */
+}
+
+/* Hover effect for menu items */
+.menu li a:hover {
+    background-color: rgba(240, 240, 240, 0.8);
+    /* Change background color on hover */
+}
+
+/* Add background images to the menu items */
+.menu .home {
+    padding-left: 10px;
+    /* Add space for the icon */
+}
+
+.menu .products {
+    padding-left: 25px;
+    /* Add space for the icon */
+}
+
+.menu .about {
+    padding-left: 25px;
+}
+
+.menu .contact {
+    padding-left: 25px;
+}
+
+.menu .login {
+    padding-left: 25px;
+    /* Add space for the icon */
+}
+#carouselExampleCaptions {
+    width: fit-content;  /* Set the fixed width */
+    max-height: fit-content /* Set the fixed height */
+}
+
+#carouselExampleCaptions img {
+    width: 100%;  /* Ensure images cover the entire width of the carousel */
+    height: 100%; /* Ensure images cover the entire height of the carousel */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+}
+
+/* Style for the body background */
+.body {
+    background-image: url('Background/pooja thali bg.jpg');
+    /* URL of the background image */
+    background-size: cover;
+    /* Cover the entire background */
+    background-attachment: fixed;
+    /* Fixed background */
+    background-position: center;
+    /* Center the background image */
+}
+
+.blocks-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.block h2 {
+    margin-top: 0;
+}
+
+.block p {
+    margin-bottom: 0;
+}
+
+.block img {
+    max-width: 100px;
+    /* Control the size of the images */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-bottom: 20px;
+}
+
+.blocks-container :hover {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.why_us {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why_us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.why_us ul li {
+    margin: 10px 0;
+}
+
+
+/* Style for the title */
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.slogan {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.menu li {
+    flex: 1;
+    text-align: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu li a:hover {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+.product-section {
+    padding: 20px;
+}
+
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card select,
+.product-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #218838;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+/* General Footer Styling */
+.footer {
+    background-color: #000000; /* Dark background */
+    color: #7b7474; /* Light grey text */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for columns */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual columns */
+  .footer-column {
+    width: 30%; /* Three columns, each taking 30% of the space */
+  }
+  
+  .footer-column h3 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* List Styling */
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 10px;
+  }
+  
+  /* Link Styling */
+  .footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  /* Link hover effect */
+  .footer-column a:hover {
+    color: #ffffff; /* Highlighted color on hover */
+  }
+  
+  /* Social Media Section */
+  .social-media a {
+    margin-right: 15px;
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+  }
+  
